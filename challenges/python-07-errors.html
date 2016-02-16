@@ -1,0 +1,95 @@
+---
+layout: page
+root: ..
+---
+
+
+<h2>Programming with Python - Errors and Exceptions</h2>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="reading-error-messages"><span class="glyphicon glyphicon-pencil"></span>Reading Error Messages</h2>
+</div>
+<div class="panel-body">
+<p>Read the traceback below, and identify the following pieces of information about it:</p>
+<ol style="list-style-type: decimal">
+<li>How many levels does the traceback have?</li>
+<li>What is the file name where the error occurred?</li>
+<li>What is the function name where the error occurred?</li>
+<li>On which line number in this function did the error occurr?</li>
+<li>What is the type of error?</li>
+<li>What is the error message?</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> errors_02
+errors_02.print_friday_message()</code></pre></div>
+<pre class="error"><code>---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+&lt;ipython-input-2-e4c4cbafeeb5&gt; in &lt;module&gt;()
+      1 import errors_02
+----&gt; 2 errors_02.print_friday_message()
+
+/Users/jhamrick/project/swc/novice/python/errors_02.py in print_friday_message()
+     13
+     14 def print_friday_message():
+---&gt; 15     print_message(&quot;Friday&quot;)
+
+/Users/jhamrick/project/swc/novice/python/errors_02.py in print_message(day)
+      9         &quot;sunday&quot;: &quot;Aw, the weekend is almost over.&quot;
+     10     }
+---&gt; 11     print(messages[day])
+     12
+     13
+
+KeyError: &#39;Friday&#39;</code></pre>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="identifying-syntax-errors"><span class="glyphicon glyphicon-pencil"></span>Identifying Syntax Errors</h2>
+</div>
+<div class="panel-body">
+<ol style="list-style-type: decimal">
+<li>Read the code below, and (without running it) try to identify what the errors are.</li>
+<li>Run the code, and read the error message. Is it a <code>SyntaxError</code> or an <code>IndentationError</code>?</li>
+<li>Fix the error.</li>
+<li>Repeat steps 2 and 3, until you have fixed all the errors.</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> another_function
+  <span class="bu">print</span>(<span class="st">&quot;Syntax errors are annoying.&quot;</span>)
+   <span class="bu">print</span>(<span class="st">&quot;But at least python tells us about them!&quot;</span>)
+  <span class="bu">print</span>(<span class="st">&quot;So they are usually not too hard to fix.&quot;</span>)</code></pre></div>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="identifying-variable-name-errors"><span class="glyphicon glyphicon-pencil"></span>Identifying Variable Name Errors</h2>
+</div>
+<div class="panel-body">
+<ol style="list-style-type: decimal">
+<li>Read the code below, and (without running it) try to identify what the errors are.</li>
+<li>Run the code, and read the error message. What type of <code>NameError</code> do you think this is? In other words, is it a string with no quotes, a misspelled variable, or a variable that should have been defined but was not?</li>
+<li>Fix the error.</li>
+<li>Repeat steps 2 and 3, until you have fixed all the errors.</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> number <span class="op">in</span> <span class="bu">range</span>(<span class="dv">10</span>):
+    <span class="co"># use a if the number is a multiple of 3, otherwise use b</span>
+    <span class="cf">if</span> (Number <span class="op">%</span> <span class="dv">3</span>) <span class="op">==</span> <span class="dv">0</span>:
+        message <span class="op">=</span> message <span class="op">+</span> a
+    <span class="cf">else</span>:
+        message <span class="op">=</span> message <span class="op">+</span> <span class="st">&quot;b&quot;</span>
+<span class="bu">print</span>(message)</code></pre></div>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="identifying-item-errors"><span class="glyphicon glyphicon-pencil"></span>Identifying Item Errors</h2>
+</div>
+<div class="panel-body">
+<ol style="list-style-type: decimal">
+<li>Read the code below, and (without running it) try to identify what the errors are.</li>
+<li>Run the code, and read the error message. What type of error is it?</li>
+<li>Fix the error.</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">seasons <span class="op">=</span> [<span class="st">&#39;Spring&#39;</span>, <span class="st">&#39;Summer&#39;</span>, <span class="st">&#39;Fall&#39;</span>, <span class="st">&#39;Winter&#39;</span>]
+<span class="bu">print</span>(<span class="st">&#39;My favorite season is &#39;</span>, seasons[<span class="dv">4</span>])</code></pre></div>
+</div>
+</section>

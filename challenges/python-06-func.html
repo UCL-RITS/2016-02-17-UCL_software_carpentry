@@ -1,0 +1,71 @@
+---
+layout: page
+root: ..
+---
+
+
+<h2>Programming with Python - Creating Functions</h2>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="combining-strings"><span class="glyphicon glyphicon-pencil"></span>Combining strings</h2>
+</div>
+<div class="panel-body">
+<p>“Adding” two strings produces their concatenation: <code>'a' + 'b'</code> is <code>'ab'</code>. Write a function called <code>fence</code> that takes two parameters called <code>original</code> and <code>wrapper</code> and returns a new string that has the wrapper character at the beginning and end of the original. A call to your function should look like this:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>(fence(<span class="st">&#39;name&#39;</span>, <span class="st">&#39;*&#39;</span>))</code></pre></div>
+<pre class="output"><code>*name*</code></pre>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="selecting-characters-from-strings"><span class="glyphicon glyphicon-pencil"></span>Selecting characters from strings</h2>
+</div>
+<div class="panel-body">
+<p>If the variable <code>s</code> refers to a string, then <code>s[0]</code> is the string’s first character and <code>s[-1]</code> is its last. Write a function called <code>outer</code> that returns a string made up of just the first and last characters of its input. A call to your function should look like this:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>(outer(<span class="st">&#39;helium&#39;</span>))</code></pre></div>
+<pre class="output"><code>hm</code></pre>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="rescaling-an-array"><span class="glyphicon glyphicon-pencil"></span>Rescaling an array</h2>
+</div>
+<div class="panel-body">
+<p>Write a function <code>rescale</code> that takes an array as input and returns a corresponding array of values scaled to lie in the range 0.0 to 1.0. (Hint: If <span class="math inline"><em>L</em></span> and <span class="math inline"><em>H</em></span> are the lowest and highest values in the original array, then the replacement for a value <span class="math inline"><em>v</em></span> should be <span class="math inline">(<em>v</em> − <em>L</em>)/(<em>H</em> − <em>L</em>)</span>.)</p>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="testing-and-documenting-your-function"><span class="glyphicon glyphicon-pencil"></span>Testing and documenting your function</h2>
+</div>
+<div class="panel-body">
+<p>Run the commands <code>help(numpy.arange)</code> and <code>help(numpy.linspace)</code> to see how to use these functions to generate regularly-spaced values, then use those values to test your <code>rescale</code> function. Once you’ve successfully tested your function, add a docstring that explains what it does.</p>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="defining-defaults-1"><span class="glyphicon glyphicon-pencil"></span>Defining defaults</h2>
+</div>
+<div class="panel-body">
+<p>Rewrite the <code>rescale</code> function so that it scales data to lie between 0.0 and 1.0 by default, but will allow the caller to specify lower and upper bounds if they want. Compare your implementation to your neighbor’s: do the two functions always behave the same way?</p>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="variables-inside-and-outside-functions"><span class="glyphicon glyphicon-pencil"></span>Variables inside and outside functions</h2>
+</div>
+<div class="panel-body">
+<p>What does the following piece of code display when run - and why?</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">f <span class="op">=</span> <span class="dv">0</span>
+k <span class="op">=</span> <span class="dv">0</span>
+
+<span class="kw">def</span> f2k(f):
+  k <span class="op">=</span> ((f<span class="dv">-32</span>)<span class="op">*</span>(<span class="fl">5.0</span><span class="op">/</span><span class="fl">9.0</span>)) <span class="op">+</span> <span class="fl">273.15</span>
+  <span class="cf">return</span> k
+
+f2k(<span class="dv">8</span>)
+f2k(<span class="dv">41</span>)
+f2k(<span class="dv">32</span>)
+
+<span class="bu">print</span>(k)</code></pre></div>
+</div>
+</section>
