@@ -1,0 +1,86 @@
+---
+layout: page
+root: ..
+---
+
+
+<h2>Programming with Python - Analyzing Patient Data</h2>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="check-your-understanding"><span class="glyphicon glyphicon-pencil"></span>Check your understanding</h2>
+</div>
+<div class="panel-body">
+<p>Draw diagrams showing what variables refer to what values after each statement in the following program:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">mass <span class="op">=</span> <span class="fl">47.5</span>
+age <span class="op">=</span> <span class="dv">122</span>
+mass <span class="op">=</span> mass <span class="op">*</span> <span class="fl">2.0</span>
+age <span class="op">=</span> age <span class="op">-</span> <span class="dv">20</span></code></pre></div>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="sorting-out-references"><span class="glyphicon glyphicon-pencil"></span>Sorting out references</h2>
+</div>
+<div class="panel-body">
+<p>What does the following program print out?</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">first, second <span class="op">=</span> <span class="st">&#39;Grace&#39;</span>, <span class="st">&#39;Hopper&#39;</span>
+third, fourth <span class="op">=</span> second, first
+<span class="bu">print</span>(third, fourth)</code></pre></div>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="slicing-strings"><span class="glyphicon glyphicon-pencil"></span>Slicing strings</h2>
+</div>
+<div class="panel-body">
+<p>A section of an array is called a <a href="reference.html#slice">slice</a>. We can take slices of character strings as well:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">element <span class="op">=</span> <span class="st">&#39;oxygen&#39;</span>
+<span class="bu">print</span>(<span class="st">&#39;first three characters:&#39;</span>, element[<span class="dv">0</span>:<span class="dv">3</span>])
+<span class="bu">print</span>(<span class="st">&#39;last three characters:&#39;</span>, element[<span class="dv">3</span>:<span class="dv">6</span>])</code></pre></div>
+<pre class="output"><code>first three characters: oxy
+last three characters: gen</code></pre>
+<p>What is the value of <code>element[:4]</code>? What about <code>element[4:]</code>? Or <code>element[:]</code>?</p>
+<p>What is <code>element[-1]</code>? What is <code>element[-2]</code>? Given those answers, explain what <code>element[1:-1]</code> does.</p>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="thin-slices"><span class="glyphicon glyphicon-pencil"></span>Thin slices</h2>
+</div>
+<div class="panel-body">
+<p>The expression <code>element[3:3]</code> produces an <a href="reference.html#empty-string">empty string</a>, i.e., a string that contains no characters. If <code>data</code> holds our array of patient data, what does <code>data[3:3, 4:4]</code> produce? What about <code>data[3:3, :]</code>?</p>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="check-your-understanding-plot-scaling"><span class="glyphicon glyphicon-pencil"></span>Check your understanding: plot scaling</h2>
+</div>
+<div class="panel-body">
+<p>Why do all of our plots stop just short of the upper end of our graph?</p>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="check-your-understanding-drawing-straight-lines"><span class="glyphicon glyphicon-pencil"></span>Check your understanding: drawing straight lines</h2>
+</div>
+<div class="panel-body">
+<p>Why are the vertical lines in our plot of the minimum inflammation per day not perfectly vertical?</p>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="make-your-own-plot"><span class="glyphicon glyphicon-pencil"></span>Make your own plot</h2>
+</div>
+<div class="panel-body">
+<p>Create a plot showing the standard deviation (<code>numpy.std</code>) of the inflammation data for each day across all patients.</p>
+</div>
+</section>
+<section class="challenge panel panel-success">
+<div class="panel-heading">
+<h2 id="moving-plots-around"><span class="glyphicon glyphicon-pencil"></span>Moving plots around</h2>
+</div>
+<div class="panel-body">
+<p>Modify the program to display the three plots on top of one another instead of side by side.</p>
+</div>
+</section>
+

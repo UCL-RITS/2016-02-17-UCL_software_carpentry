@@ -3,6 +3,7 @@ layout: page
 title: Testing Setup
 root: ..
 ---
+# Test your setup
 
 This directory contains scripts for testing your machine to make sure
 you have the software you'll need for your workshop installed.  To use
@@ -62,4 +63,22 @@ these scripts:
     ==================
     os.name            : posix
     ...
+    ~~~
+
+# Get ready for Python
+
+1.  Make a new folder in your Desktop called `python-novice-inflammation`.
+
+1.  Download
+    [`python-novice-inflammation-data.zip`](http://swcarpentry.github.io/python-novice-inflammation/python-novice-inflammation-data.zip)
+    and move the file to this folder.
+
+1.  If it's not unzipped yet, double-click on it to unzip it. You should end up
+    with a new folder called `data`.
+
+1.  From the shell:
+
+    ~~~
+    $ cd && cd Desktop/python-novice-inflammation/data
+    $ jupyter notebook
     ~~~
